@@ -1,11 +1,26 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse  
+from django.http import HttpResponse
+from .form import ContactForm
+from .models import Contact 
 
+# basic page
 def home(request):  
     return render(request, 'contact/home.html')
 
+# form page
 def contactregister(request):
-    return render(request,'contact/contact-register.html')
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form_is_valid():
+            form.save_contact()
+            return redirect('store')
+    else:
+        form = ContactForm()
+    context = {'form':form}
+    return render(request,'contact/contact-register.html',context)
 
+# show page
 def store(request):
-    return render(request, 'contact/store.html')
+    contacts = Contact.objects.all()
+    context = {'contacts':contacts}
+    return render(request, 'contact/store.html',context)
