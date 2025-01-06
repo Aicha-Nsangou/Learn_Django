@@ -3,12 +3,13 @@
 <html lang="en">
 <head>
     <title>Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="{% static 'styles/style.css' %}">
 
 </head>
 <body>
     <h1> Register </h1>
-    <form method="post">
+    <form method="post" class='register'>
         {% csrf_token %}
         {{form.as_p}}
         <button type="submit">Save</button>

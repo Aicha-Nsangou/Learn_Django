@@ -1,0 +1,89 @@
+body{
+     background-image: url('../images/background.jpg');
+     height: 100%;
+     width: 100%;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     margin-top: 10px;
+     font-family: 'Alice',sans-serif;
+}
+h1{
+    color: #0C0420;
+    margin: auto;
+    font-size: 60px;
+    text-align: center;
+    padding: 15px;
+}
+
+.container,.register{
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3) ;
+    width: 650px;
+    height: 350px;
+    padding: 5px;
+}
+.register{ height: 400px;}
+
+.container img{
+    width: 38px;
+    padding-right: 5px;
+    position: relative;
+    top: 85%;
+    left: 40%;
+}
+
+button,a{
+    width: 288px;
+    height: 44px;
+    margin: auto;
+    border: none;
+    border-radius: 8px;
+    position: relative;
+    left: 25%;
+    text-align: center;
+    font-weight: bolder;
+    display: inline-block;
+    text-decoration: none;
+    color: #0C0420;
+}
+
+button:hover{
+    background-color: #0C0420;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+label{
+    font-weight: bold;
+    padding: 45px 0 0 45px;
+}
+
+form input{
+    padding: 9px;
+    border-radius: 5px;
+    border: 1px solid rgba(61, 61, 61, 0.3);
+    outline: none;
+    width: 90%;
+    box-sizing: border-box;
+    margin: 5px 0 5px 45px;
+}
+
+table{
+    width: 90%;
+    margin: auto;
+    border-collapse: separate;
+}
+table,th,td{
+    border: 1px solid #0C0420;
+}
+th{
+    background-color: #5d3c64;
+    color: #f2f2f2;
+}
+
