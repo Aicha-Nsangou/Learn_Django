@@ -9,3 +9,5 @@ class Contact(models.Model):
     telephone = models.CharField(max_length=50)
     email = models.EmailField(max_length=254)
 
+    def __str__(self):
+        return (f"ID:{self.id}\n name : {self.name}\n prenom : {self.prenom}\n telephone: {self.telephone} \n email:{self.email}")

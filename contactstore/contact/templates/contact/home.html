@@ -1,1 +1,22 @@
 {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HOME</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1> Contact Register</h1>
+        <img src="{% static 'images/github.png' %}" alt="github">
+        <img src="{% static 'images/email.png' %}" alt="email">
+        <img src="{% static 'images/contact.png' %}" alt="telephone">
+        
+        <form action="{% url 'contact-regist'%}" method="get">
+            <button type="submit"> Try It</button>
+        </form>
+        
+    </div>
+</body>
+</html>

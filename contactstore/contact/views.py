@@ -11,13 +11,13 @@ def home(request):
 def contactregister(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
-        if form_is_valid():
-            form.save_contact()
+        if form.is_valid():
+            form.save()
             return redirect('store')
     else:
         form = ContactForm()
     context = {'form':form}
-    return render(request,'contact/contact-register.html',context)
+    return render(request,'contact/contact-regist.html',context)
 
 # show page
 def store(request):

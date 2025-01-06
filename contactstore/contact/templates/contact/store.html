@@ -1,1 +1,19 @@
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>STORE</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+
+</head>
+<body>
+    <h1> STORE </h1>
+    <ul>
+        {% for contact  in contacts %}
+        <li> {{contact}} </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'home' %}"> Come back and Try aigain !</a>
+</body>
+</html>
